@@ -14,3 +14,7 @@ export function abbreviateNumber(number: number): string {
 
   return formatted + postfix;
 }
+
+export function randInt(min: number, max: number): number {
+  return Math.floor(Math.random() * max) + min;
+}
