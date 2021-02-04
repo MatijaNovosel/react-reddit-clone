@@ -1,13 +1,18 @@
 import { Navbar } from "./components/Navbar";
 import { Main } from "./components/Main";
+import { PostDetails } from "./components/PostDetails";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function App() {
+function AppRouter() {
   return (
     <>
-      <Navbar></Navbar>
-      <Main></Main>
+      <Navbar />
+      <Router>
+        <Route path="/" exact component={Main} />
+        <Route path="/comments/:id" exact component={PostDetails} />
+      </Router>
     </>
   );
 }
 
-export default App;
+export default AppRouter;
