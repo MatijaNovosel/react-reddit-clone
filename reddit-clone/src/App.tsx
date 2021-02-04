@@ -1,4 +1,7 @@
 import { default as logo } from './assets/atom.svg';
+import { default as arrowUp } from './assets/arrow-up.svg';
+import { default as arrowDown } from './assets/arrow-down.svg';
+import { abbreviateNumber } from "./helpers/helpers";
 
 function App() {
   return (
@@ -29,11 +32,11 @@ function Navbar() {
 
 function Main() {
   return (
-    <main className="container mx-auto pt-5 gap-5 grid grid-cols-12">
+    <main className="container mx-auto pt-5 gap-5 grid grid-cols-12 mb-10">
       <div className="col-span-9">
         <TopCard />
-        <div className="flex flex-col space-y-5">
-          {[1, 2, 3, 4, 5].map(() => <PostCard />)}
+        <div className="flex flex-col space-y-3">
+          {[...Array.from(new Array(20), (x, i) => i)].map(() => <PostCard />)}
         </div>
       </div>
       <div className="col-span-3">
@@ -45,20 +48,22 @@ function Main() {
 
 function PostCard() {
   return (
-    <div className="border border-gray-300 rounded-md shadow w-full bg-white p-5 flex flex-col space-y-2">
-      <div className="flex space-x-2 items-center">
-        <img src="https://avatars.githubusercontent.com/u/36193643?s=460&u=476cacf3518a2a0914c512b60ea1b046413900cf&v=4" alt="" className="rounded-full h-5 w-5 flex items-center justify-center" />
-        <span>r/Something</span>
-        <span className="text-gray-500">Posted by u/Someone</span>
-        <span>4 hours ago</span>
+    <div className="border border-gray-300 rounded-md shadow w-full bg-white flex">
+      <div className="p-4 flex flex-col justify-center space-y-1 bg-gray-100 rounded-l-lg items-center">
+        <img alt="" src={arrowUp} className="h-5 w-5 cursor-pointer hover:bg-gray-200 rounded-md" />
+        <span className="font-bold">{abbreviateNumber(22240)}</span>
+        <img alt="" src={arrowDown} className="h-5 w-5 cursor-pointer hover:bg-gray-200 rounded-md" />
       </div>
-      <div className="text-xl font-bold text-gray-400">
-        <span className="cursor-pointer">Post title</span>
-      </div>
-      <img src="https://preview.redd.it/rwitgj4ipef61.jpg?width=640&crop=smart&auto=webp&s=15ac93e425f4c5fe6639af0e0a68516b2cdc8fdd" alt="" className="h-96 rounded-md" />
-      <div className="flex space-x-2 items-center">
-        <span>300 Comments</span>
-        <span className="text-gray-500">Share</span>
+      <div className="flex flex-col justify-center py-5 pl-5">
+        <div className="text-lg font-semibold text-gray-400">
+          <span className="cursor-pointer">Post title</span>
+        </div>
+        <div className="flex space-x-1">
+          <span className="font-bold">r/Something</span>
+          <span>•</span>
+          <span className="text-gray-500">Posted by u/Someone</span>
+        </div>
+        <span className="text-sm text-gray-400">4 hours ago</span>
       </div>
     </div>
   );
