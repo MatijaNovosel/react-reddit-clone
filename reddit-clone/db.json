@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "title": "Post 1",
+      "author": {
+        "id": 1,
+        "username": "user1"
+      },
+      "upvotes": 12400,
+      "comments": 293,
+      "timeStamp": 1612480052520,
+      "id": 1
+    },
+    {
+      "title": "Post 2",
+      "author": {
+        "id": 2,
+        "username": "user2"
+      },
+      "upvotes": 27400,
+      "comments": 195,
+      "timeStamp": 1612198869920,
+      "id": 2
+    },
+    {
+      "title": "Post 3",
+      "author": {
+        "id": 3,
+        "username": "user3"
+      },
+      "upvotes": 2400,
+      "comments": 404,
+      "timeStamp": 1612180052520,
+      "id": 3
+    },
+    {
+      "title": "Post 4",
+      "author": {
+        "id": 4,
+        "username": "user4"
+      },
+      "upvotes": 4400,
+      "comments": 50,
+      "timeStamp": 1611480052520,
+      "id": 4
+    }
+  ]
+}
