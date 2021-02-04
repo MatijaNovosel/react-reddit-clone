@@ -17,6 +17,7 @@ module.exports = {
       black: colors.black
     },
     extend: {
+      outline: ['hover', 'active'],
       colors: {
         yellow: {
           "450": "#fed001"
