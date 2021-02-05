@@ -1,10 +1,10 @@
-import { TopCard } from "./TopCard/TopCard";
-import { PostCard } from "./PostCard";
+import { TopCard } from "../components/TopCard/TopCard";
+import { PostCard } from "../components/PostCard";
 import { useEffect, useState } from "react";
 import { config } from "../config/config";
 import { Post } from "../models/post";
 import { TrendingCard } from "../components/TrendingCard";
-import { GrowingCommunityCard } from "./GrowingCommunityCard";
+import { GrowingCommunityCard } from "../components/GrowingCommunityCard";
 
 export function Main() {
   const [posts, setPosts] = useState<Post[]>([]);

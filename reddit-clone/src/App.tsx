@@ -1,6 +1,6 @@
 import { Navbar } from "./components/Navbar";
-import { Main } from "./components/Main";
-import { PostDetails } from "./components/PostDetails";
+import { Main } from "./views/Main";
+import { PostDetails } from "./views/PostDetails";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function AppRouter() {
