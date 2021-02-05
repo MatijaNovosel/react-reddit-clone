@@ -6,7 +6,8 @@ const IconNames = [
   "fire",
   "graphSpline",
   "webClock",
-  "chevronUp"
+  "chevronUp",
+  "loading"
 ] as const;
 
 export type IconName = typeof IconNames[number];

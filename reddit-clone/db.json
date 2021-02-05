@@ -1,4 +1,33 @@
 {
+  "subReddits": [{
+    "name": "Test1",
+    "id": 1
+  }, {
+    "name": "Test2",
+    "id": 2
+  }, {
+    "name": "Test3",
+    "id": 3
+  }, {
+    "name": "Test4",
+    "id": 4
+  }, {
+    "name": "Test5",
+    "id": 5
+  }],
+  "authors": [{
+    "username": "user1",
+    "id": 1
+  }, {
+    "username": "user2",
+    "id": 2
+  }, {
+    "username": "user3",
+    "id": 3
+  }, {
+    "username": "user4",
+    "id": 4
+  }],
   "posts": [
     {
       "title": "Post 1",

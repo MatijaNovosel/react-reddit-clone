@@ -1,3 +1,3 @@
 export const config = {
-  "API_ROUTES": "http://localhost:3000/"
+  "API_ROUTES": "http://localhost:3000"
 }

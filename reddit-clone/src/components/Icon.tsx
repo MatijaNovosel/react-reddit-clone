@@ -26,13 +26,16 @@ function fetchIconPath(name: IconName) {
     case "chevronUp": {
       return "M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z";
     }
+    case "loading": {
+      return "M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z";
+    }
   }
 }
 
 interface IconProps {
   name: IconName;
   color: string;
-  className: string;
+  className?: string;
 }
 
 export function Icon(props: IconProps) {
