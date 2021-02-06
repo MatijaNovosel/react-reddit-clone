@@ -8,4 +8,8 @@ export class PostService implements IPostService {
     const { data } = await axios.get(`${config.API_ROUTES}/posts`);
     return data;
   }
+  async getPostDetails(id: number): Promise<Post> {
+    const { data } = await axios.get(`${config.API_ROUTES}/posts/${id}`);
+    return data;
+  }
 }

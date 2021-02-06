@@ -1,3 +1,4 @@
+import { SubReddit } from "./subReddit";
 import { User } from "./user";
 
 export interface Post {
@@ -7,4 +8,5 @@ export interface Post {
   upvotes: number;
   comments: number;
   timeStamp: number;
+  subReddit: SubReddit;
 }
