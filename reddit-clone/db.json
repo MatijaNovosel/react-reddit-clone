@@ -30,6 +30,17 @@
   }],
   "posts": [
     {
+      "title": "Post 5",
+      "author": {
+        "id": 2,
+        "username": "user2"
+      },
+      "upvotes": 7400,
+      "comments": 29,
+      "timeStamp": 1612480052521,
+      "id": 5
+    },
+    {
       "title": "Post 1",
       "author": {
         "id": 1,

@@ -1,11 +1,14 @@
 import { Icon } from "./Icon";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   return (
     <nav className="bg-gray-100 w-full shadow h-16 px-6 top-0 sticky justify-between items-center flex">
       <div className="text-black flex items-center space-x-1 select-none">
         <Icon name="atom" color="#00d8ff" className="mr-3 h-8" />
-        (Not) <span className="font-bold text-xl text-gray-500">Reddit</span>
+        <Link className="cursor-pointer" to="/">
+          (Not) <span className="font-bold text-xl text-gray-500">Reddit</span>
+        </Link>
       </div>
       <div>
         <input
