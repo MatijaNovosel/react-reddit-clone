@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Post } from "../models/post";
 import { TrendingCard } from "../components/TrendingCard";
 import { Icon } from "../components/Icon";
-import { GrowingCommunityCard } from "../components/GrowingCommunityCard";
+import { GrowingCommunityCard } from "../components/GrowingCommunityCard/GrowingCommunityCard";
 import { getService, Types } from "../di-container";
 import { IPostService } from "../services/interfaces/postService";
 
