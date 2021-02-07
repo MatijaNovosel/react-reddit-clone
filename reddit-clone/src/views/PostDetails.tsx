@@ -1,32 +1,40 @@
 import { useCallback, useEffect, useState } from "react";
-import { RouteComponentProps, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getService, Types } from "../di-container";
 import { Post } from "../models/post";
 import { Icon } from "../components/Icon";
 import { IPostService } from "../services/interfaces/postService";
 import { abbreviateNumber } from "../helpers/helpers";
 import { formatDistance } from "date-fns";
+import { Comment } from "../models/comment";
+import { ICommentService } from "../services/interfaces/commentService";
 
 type TParams = { id: string };
 
-export function PostDetails({ match }: RouteComponentProps<TParams>) {
+export function PostDetails() {
   const [post, setPostDetails] = useState<Post | null>(null);
+  const [comments, setComments] = useState<Comment[] | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const { id } = useParams<TParams>();
 
-  const fetchPostDetails = useCallback(async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
     setPostDetails(
       await getService<IPostService>(Types.PostService).getPostDetails(
         parseInt(id)
       )
     );
+    setComments(
+      await getService<ICommentService>(
+        Types.CommentService
+      ).getCommentsForPost(parseInt(id))
+    );
     setLoading(false);
   }, [id]);
 
   useEffect(() => {
-    fetchPostDetails();
-  }, [fetchPostDetails]);
+    fetchData();
+  }, [fetchData]);
 
   return loading ? (
     <div className="flex justify-center mt-6">
@@ -77,7 +85,7 @@ export function PostDetails({ match }: RouteComponentProps<TParams>) {
         </div>
         <span className="text-xl font-bold my-2">{post?.title}</span>
         <div className="bg-black rounded-lg h-96 w-full mt-1"></div>
-        <div className="flex mt-3 space-x-2">
+        <div className="flex mt-3 space-x-2 select-none">
           <div className="flex space-x-2 items-center text-xs hover:bg-gray-200 cursor-pointer p-2 rounded-md">
             <Icon name="comment" color="#94a6ca" className="h-3 w-3" />
             <span className="font-bold">{post?.comments} Comments</span>
@@ -98,6 +106,13 @@ export function PostDetails({ match }: RouteComponentProps<TParams>) {
             <Icon name="report" color="#94a6ca" className="h-4 w-4" />
             <span className="font-bold">Report</span>
           </div>
+        </div>
+        <div className="flex flex-col">
+          {comments?.map((x, i) => (
+            <div key={i} className="flex flex-col">
+              {x.content}
+            </div>
+          ))}
         </div>
       </div>
     </main>
