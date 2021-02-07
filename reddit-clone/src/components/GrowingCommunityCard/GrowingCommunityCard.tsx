@@ -43,6 +43,11 @@ export function GrowingCommunityCard() {
           ))
         )}
       </div>
+      <div className="px-5 py-3">
+        <button className="rounded-full bg-blue-500 text-white w-full py-2 font-bold focus:outline-none hover:bg-blue-400">
+          View all
+        </button>
+      </div>
     </div>
   );
 }

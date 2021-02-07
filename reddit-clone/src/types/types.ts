@@ -7,7 +7,11 @@ const IconNames = [
   "graphSpline",
   "webClock",
   "chevronUp",
-  "loading"
+  "loading",
+  "share",
+  "save",
+  "hide",
+  "report"
 ] as const;
 
 export type IconName = typeof IconNames[number];
