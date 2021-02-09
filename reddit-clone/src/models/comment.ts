@@ -7,4 +7,5 @@ export interface Comment {
   content: string;
   upvotes: number;
   author: User;
+  timeStamp: number;
 }
