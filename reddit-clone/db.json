@@ -152,6 +152,36 @@
       "comments": 50,
       "timeStamp": 1611480052520,
       "id": 4
+    },
+    {
+      "title": "Post 5",
+      "author": {
+        "id": 4,
+        "username": "user4"
+      },
+      "subReddit": {
+        "id": 1,
+        "name": "Test1"
+      },
+      "upvotes": 223,
+      "comments": 1,
+      "timeStamp": 1611480052520,
+      "id": 5
+    },
+    {
+      "title": "Post 6",
+      "author": {
+        "id": 4,
+        "username": "user4"
+      },
+      "subReddit": {
+        "id": 1,
+        "name": "Test1"
+      },
+      "upvotes": 654,
+      "comments": 75,
+      "timeStamp": 1611480052520,
+      "id": 6
     }
   ]
 }

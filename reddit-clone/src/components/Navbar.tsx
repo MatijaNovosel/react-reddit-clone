@@ -22,7 +22,9 @@ export function Navbar() {
           type="button"
           className="rounded-md bg-gray-500 text-white px-4 py-1 focus:outline-none"
         >
-          Log in
+          <Link className="cursor-pointer" to="/login">
+            Log in
+          </Link>
         </button>
         <button
           type="button"

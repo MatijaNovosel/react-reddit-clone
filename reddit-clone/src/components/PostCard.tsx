@@ -34,7 +34,7 @@ export function PostCard(props: PostCardProps) {
             </Link>
           </div>
           <div className="flex space-x-1 mb-1">
-            <span className="font-bold">r/Something</span>
+            <span className="font-bold">r/{props.post.subReddit.name}</span>
             <span>•</span>
             <span className="text-gray-500">
               Posted by
