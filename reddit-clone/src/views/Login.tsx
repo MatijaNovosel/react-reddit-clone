@@ -39,11 +39,11 @@ export function Login() {
               Forgot Password?
             </a>
           </div>
-          <button className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform bg-gray-800 rounded-lg hover:bg-gray-600 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 ">
-            <Link className="cursor-pointer" to="/">
+          <Link className="cursor-pointer" to="/">
+            <button className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform bg-gray-800 rounded-lg hover:bg-gray-600 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 ">
               Log in
-            </Link>
-          </button>
+            </button>
+          </Link>
           <hr className="w-full my-6 border-gray-300" />
           <div className="flex justify-enter">
             <button
