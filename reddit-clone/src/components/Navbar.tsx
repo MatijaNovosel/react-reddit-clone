@@ -18,14 +18,14 @@ export function Navbar() {
         />
       </div>
       <div className="space-x-2">
-        <button
-          type="button"
-          className="rounded-md bg-gray-500 text-white px-4 py-1 focus:outline-none"
-        >
-          <Link className="cursor-pointer" to="/login">
+        <Link className="cursor-pointer" to="/login">
+          <button
+            type="button"
+            className="rounded-md bg-gray-500 text-white px-4 py-1 focus:outline-none"
+          >
             Log in
-          </Link>
-        </button>
+          </button>
+        </Link>
         <button
           type="button"
           className="rounded-md bg-gray-700 text-white px-4 py-1 focus:outline-none"

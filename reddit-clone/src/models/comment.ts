@@ -8,4 +8,5 @@ export interface Comment {
   upvotes: number;
   author: User;
   timeStamp: number;
+  children?: Comment[];
 }
